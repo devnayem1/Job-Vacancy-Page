@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Vacancy | Advertising & More</title>
+<meta name="description" content="Apply for a position at Advertising & More Sdn. Bhd.">
+<link rel="icon" href="https://advertisingandmore.com/wp-content/uploads/2026/07/coffee-cup.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* DESIGN TOKENS: swap to match the exact Elementor global colours / fonts */
+:root{--navy:#0b1f3a;--navy-2:#14305a;--cream:#fbf6ee;--coffee:#e9a23b;--coffee-d:#c9831a;--ink:#16233a;--muted:#5d6b82;--line:#e4dccd;--ok:#1f8a5b;--err:#c8372d;--r:16px;--r-s:10px;--sh:0 10px 30px rgba(11,31,58,.10);--font:'Poppins',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--hdr:76px;--max:1180px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--coffee);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:200;background:#fff;padding:10px 16px;border-radius:8px}
+h1,h2,h3{line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;font-weight:800}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--coffee-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 28px;border-radius:999px;border:2px solid transparent;font:600 .92rem var(--font);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s,color .2s}
+.btn img{width:22px;height:22px;object-fit:contain}
+.btn-p{background:var(--coffee);color:var(--navy)}.btn-p:hover{background:var(--coffee-d);transform:translateY(-2px);box-shadow:0 8px 18px rgba(233,162,59,.4)}
+.btn-o{border-color:var(--navy);color:var(--navy)}.btn-o:hover{background:var(--navy);color:#fff}
+.btn-w{border-color:#fff;color:#fff}.btn-w:hover{background:#fff;color:var(--navy)}
+.btn[disabled]{opacity:.7;cursor:not-allowed;transform:none}
+/* header */
+header{position:sticky;top:0;z-index:100;background:rgba(11,31,58,.97);backdrop-filter:blur(8px);color:#fff}
+.hbar{height:var(--hdr);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700}
+.brand img{width:40px;height:40px;object-fit:contain}
+nav ul{display:flex;gap:6px;list-style:none;padding:0}
+nav a.nl{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:500;color:#dfe7f3;transition:background .2s,color .2s}
+nav a.nl:hover{background:rgba(255,255,255,.1);color:#fff}
+nav a.nl[aria-current=page]{background:var(--coffee);color:var(--navy);font-weight:600}
+.burger{display:none;width:48px;height:48px;border:0;background:transparent;cursor:pointer;border-radius:10px}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:transform .3s,opacity .3s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:960px){
+.burger{display:block}.hcta{display:none}
+nav{position:fixed;inset:var(--hdr) 0 0 0;background:var(--navy);padding:24px;transform:translateX(100%);transition:transform .35s ease;visibility:hidden;overflow-y:auto}
+nav.open{transform:none;visibility:visible}
+nav ul{flex-direction:column;gap:4px}
+nav a.nl{font-size:1.25rem;padding:16px 14px;border-bottom:1px solid rgba(255,255,255,.1);border-radius:0}
+nav .mcta{display:flex;margin-top:24px}}
+@media(min-width:961px){nav .mcta{display:none}}
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:72px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4.4rem);margin:14px 0 18px}.hero h1 em{font-style:normal;color:var(--coffee)}
+.hero p{max-width:540px;color:#cdd8ea;font-size:1.06rem;margin-bottom:28px}
+.acts{display:flex;gap:14px;flex-wrap:wrap}
+.info{background:var(--navy-2);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:28px}
+.info h2{font-size:.8rem;letter-spacing:.14em;color:var(--coffee);margin-bottom:12px}
+.info dl{display:grid}
+.info div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.info div:last-child{border:0}
+.info dt{color:#9fb1cc;font-size:.88rem}.info dd{font-weight:600;text-align:right}
+.rv{opacity:0;transform:translateY(22px);animation:rv .8s .1s forwards}.rv2{animation-delay:.25s}.rv3{animation-delay:.4s}
+@keyframes rv{to{opacity:1;transform:none}}
+@media(max-width:860px){.hero{padding:48px 0 56px}.hero .wrap{grid-template-columns:1fr;gap:32px}}
+/* content */
+.content{padding:80px 0 20px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.blk{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,3vw,38px)}
+.blk.wide{grid-column:1/-1}
+.blk h2{font-size:1.35rem;margin:6px 0 14px}
+.blk p{color:var(--muted)}
+.blk ul{list-style:none;padding:0;display:grid;gap:12px}
+.blk li{position:relative;padding-left:30px;color:var(--ink)}
+.blk li:before{content:"";position:absolute;left:0;top:.5em;width:14px;height:14px;border-radius:50%;background:var(--coffee);box-shadow:inset 0 0 0 4px var(--cream)}
+.demo{font-size:.82rem;color:var(--muted);margin-top:18px}
+@media(max-width:820px){.cols{grid-template-columns:1fr}.content{padding-top:48px}}
+/* form */
+.apply{padding:64px 0 90px}
+.ap-h{margin-bottom:30px}.ap-h h2{font-size:clamp(2rem,5vw,3.4rem);margin:8px 0 10px}.ap-h p{color:var(--muted);max-width:560px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,48px);box-shadow:var(--sh);max-width:880px}
+.grp{padding:8px 0 30px}
+.grp+.grp{border-top:1px solid var(--line);padding-top:30px}
+.gh{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.gh b{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--coffee);display:grid;place-items:center;font-size:.85rem;flex:none}
+.gh h3{font-size:1rem;letter-spacing:.08em}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.full{grid-column:1/-1}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+label,.lbl{display:block;font-weight:600;font-size:.9rem;margin-bottom:8px}.req{color:var(--err)}
+.inp{width:100%;min-height:52px;padding:12px 16px;border:1.5px solid var(--line);border-radius:var(--r-s);font:inherit;font-size:1rem;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.inp:hover{border-color:#cdbf9f}.inp:focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 4px rgba(233,162,59,.35)}
+.inp:disabled{background:var(--cream)}
+.f.bad .inp,.f.bad .drop{border-color:var(--err)}.f.good .inp{border-color:var(--ok)}
+.err{display:none;color:var(--err);font-size:.84rem;margin-top:6px;font-weight:500}.f.bad .err{display:block;animation:rv .3s}
+.hint{font-size:.8rem;color:var(--muted);margin-top:6px}
+.seg{display:flex;gap:10px}.seg label{flex:1;margin:0;cursor:pointer}.seg input{position:absolute;opacity:0}
+.seg span{display:flex;align-items:center;justify-content:center;min-height:52px;border:1.5px solid var(--line);border-radius:var(--r-s);font-weight:600;transition:.2s}
+.seg input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy)}
+.seg input:focus-visible+span{outline:3px solid var(--coffee);outline-offset:2px}
+.pp{overflow:hidden;max-height:0;opacity:0;transition:max-height .35s,opacity .3s}.pp.show{max-height:170px;opacity:1;padding:2px}
+.drop{border:2px dashed #cdbf9f;border-radius:var(--r);padding:32px 20px;text-align:center;background:var(--cream);transition:.2s;cursor:pointer}
+.drop:hover,.drop.over{border-color:var(--coffee-d);background:#fff4dd}
+.drop strong{display:block;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem}
+.drop u{color:var(--coffee-d);font-weight:600}.drop small{display:block;color:var(--muted);margin-top:6px}
+.file{display:none;align-items:center;gap:14px;border:1.5px solid var(--ok);background:#f0faf5;border-radius:var(--r);padding:14px 16px}
+.file.show{display:flex;animation:rv .3s}
+.file .ic{width:44px;height:44px;border-radius:10px;background:var(--ok);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.7rem;flex:none}
+.file .meta{flex:1;min-width:0}.file .nm{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.file .sz{font-size:.8rem;color:var(--muted)}
+.bar{height:5px;background:#d7ece1;border-radius:9px;margin-top:6px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+.rm{border:0;background:transparent;color:var(--err);font:600 .85rem var(--font);cursor:pointer;min-height:44px;padding:0 10px}.rm:hover{text-decoration:underline}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:.85rem;color:var(--muted);font-weight:400}
+.consent input{margin-top:5px;width:20px;height:20px;accent-color:var(--navy);flex:none}
+.sub{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.spin{width:18px;height:18px;border:3px solid rgba(11,31,58,.25);border-top-color:var(--navy);border-radius:50%;animation:sp .7s linear infinite;display:none}.loading .spin{display:inline-block}
+@keyframes sp{to{transform:rotate(360deg)}}
+.summary{display:none;background:#fdecea;border:1px solid var(--err);color:var(--err);padding:12px 16px;border-radius:var(--r-s);font-weight:500;font-size:.9rem;margin-bottom:22px}.summary.show{display:block}
+@media(max-width:560px){.sub .btn{width:100%}}
+.state{text-align:center;padding:30px 0 10px}.state h2{font-size:clamp(1.8rem,5vw,3rem);margin:18px 0 12px}
+.state p{color:var(--muted);max-width:480px;margin:0 auto 24px}
+.tick{width:84px;height:84px;border-radius:50%;margin:0 auto;display:grid;place-items:center;background:var(--ok);animation:pop .5s cubic-bezier(.2,1.4,.4,1)}.tick.x{background:var(--err)}
+.tick svg{width:42px;height:42px;stroke:#fff;fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pop{from{transform:scale(0)}}
+.ref{display:inline-block;background:var(--cream);border:1px dashed var(--coffee-d);border-radius:var(--r);padding:14px 30px;margin-bottom:28px}
+.ref small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.ref b{font-size:1.5rem;letter-spacing:.06em}
+.state .btn{margin:4px}
+/* footer */
+footer{background:var(--navy);color:#cdd8ea;padding:64px 0 28px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}
+footer h4{color:#fff;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin-bottom:16px}
+footer ul{list-style:none;padding:0;display:grid;gap:2px}
+footer li a{display:inline-block;padding:6px 0;text-decoration:none;font-size:.93rem;transition:color .2s}footer li a:hover{color:var(--coffee)}
+.fb{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;margin-bottom:14px}.fb img{width:44px}
+.fbot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1}}
+</style>
+</head>
+<body>
+<a class="skip sr" href="#main">Skip to content</a>
+<header>
+ <div class="wrap hbar">
+  <a class="brand" href="https://advertisingandmore.com/"><img src="https://advertisingandmore.com/wp-content/uploads/2026/07/coffee-cup.png" alt="" onerror="this.style.display='none'"><span>Advertising &amp; More</span></a>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a class="nl" href="https://advertisingandmore.com/home/">Home</a></li>
+    <li><a class="nl" href="https://advertisingandmore.com/#services">Services</a></li>
+    <li><a class="nl" href="https://advertisingandmore.com/#about">About</a></li>
+    <li><a class="nl" href="https://advertisingandmore.com/#reviews">Reviews</a></li>
+    <li><a class="nl" href="https://advertisingandmore.com/#whyus">Why Us</a></li>
+    <li><a class="nl" href="#" aria-current="page">Careers</a></li>
+    <li><a class="nl" href="https://advertisingandmore.com/#contactform">Contact</a></li>
+   </ul>
+   <a class="btn btn-p mcta" href="https://advertisingandmore.com/#contactform"><img src="https://advertisingandmore.com/wp-content/uploads/2026/07/coffee-cup.png" alt="" onerror="this.remove()">Click For Coffee</a>
+  </nav>
+  <a class="btn btn-p hcta" href="https://advertisingandmore.com/#contactform"><img src="https://advertisingandmore.com/wp-content/uploads/2026/07/coffee-cup.png" alt="" onerror="this.remove()">Click For Coffee</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<main id="main">
+ <section class="hero">
+  <div class="wrap">
+   <div>
+    <span class="eyebrow rv">Job Vacancy</span>
+    <h1 class="rv rv2" id="jTitle"></h1>
+    <p class="rv rv2" id="jIntro"></p>
+    <div class="acts rv rv3"><a class="btn btn-p" href="#apply">Apply now</a><a class="btn btn-w" href="#role">View the role</a></div>
+   </div>
+   <aside class="info rv rv3" aria-label="Job information"><h2>Job information</h2><dl id="jInfo"></dl></aside>
+  </div>
+ </section>
+
+ <section class="content" id="role">
+  <div class="wrap">
+   <div class="cols">
+    <div class="blk wide"><span class="eyebrow">The opportunity</span><h2>About the role</h2><p id="jAbout"></p></div>
+    <div class="blk"><span class="eyebrow">Day to day</span><h2>Key responsibilities</h2><ul id="jResp"></ul></div>
+    <div class="blk"><span class="eyebrow">You</span><h2>What we're looking for</h2><ul id="jReq"></ul></div>
+   </div>
+   <p class="demo" id="jDemo"></p>
+  </div>
+ </section>
+
+ <section class="apply" id="apply">
+  <div class="wrap">
+   <div class="ap-h"><span class="eyebrow">Apply</span><h2>Make your next move.</h2><p>Tell us a little about yourself. We'd love to hear what you can bring to the team.</p></div>
+   <div class="card" id="card">
+    <form id="form" novalidate>
+     <div class="summary" id="summary" role="alert"></div>
+
+     <fieldset class="grp" style="border:0;min-inline-size:0">
+      <legend class="gh" style="padding:0"><b>01</b><h3>Personal information</h3></legend>
+      <div class="grid">
+       <div class="f full" data-f="name">
+        <label for="name">Full Name (as per IC) <span class="req">*</span></label>
+        <input class="inp" id="name" name="fullName" autocomplete="name" placeholder="Enter your full name" required>
+        <div class="err" id="e-name"></div>
+       </div>
+       <div class="f full">
+        <span class="lbl" id="fl">Are you a foreign applicant? <span class="req">*</span></span>
+        <div class="seg" role="radiogroup" aria-labelledby="fl">
+         <label><input type="radio" name="foreign" value="no" checked><span>No</span></label>
+         <label><input type="radio" name="foreign" value="yes"><span>Yes</span></label>
+        </div>
+       </div>
+       <div class="f full pp" id="ppWrap" data-f="passport">
+        <label for="passport">Passport Number (for foreigners) <span class="req">*</span></label>
+        <input class="inp" id="passport" name="passport" placeholder="Enter your passport number" autocomplete="off" disabled>
+        <div class="err" id="e-passport"></div>
+       </div>
+       <div class="f" data-f="dob">
+        <label for="dob">Date of Birth <span class="req">*</span></label>
+        <input class="inp" type="date" id="dob" name="dob" required>
+        <div class="err" id="e-dob"></div>
+       </div>
+       <div class="f" data-f="phone">
+        <label for="phone">Mobile Phone Number <span class="req">*</span></label>
+        <input class="inp" type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. +60 12 345 6789" required>
+        <div class="err" id="e-phone"></div>
+       </div>
+      </div>
+     </fieldset>
+
+     <fieldset class="grp" style="border:0;min-inline-size:0">
+      <legend class="gh" style="padding:0"><b>02</b><h3>Employment information</h3></legend>
+      <div class="grid">
+       <div class="f" data-f="employer">
+        <label for="employer">Name of Current Employer <span class="req">*</span></label>
+        <input class="inp" id="employer" name="employer" autocomplete="organization" placeholder="Enter current employer" required>
+        <div class="err" id="e-employer"></div>
+       </div>
+       <div class="f" data-f="start">
+        <label for="start">Earliest Starting Date <span class="req">*</span></label>
+        <input class="inp" type="date" id="start" name="startDate" required>
+        <div class="err" id="e-start"></div>
+       </div>
+      </div>
+     </fieldset>
+
+     <fieldset class="grp" style="border:0;min-inline-size:0">
+      <legend class="gh" style="padding:0"><b>03</b><h3>Professional profile</h3></legend>
+      <div class="f" data-f="linkedin">
+       <label for="linkedin">LinkedIn Profile URL <span class="req">*</span></label>
+       <input class="inp" type="url" id="linkedin" name="linkedin" inputmode="url" autocomplete="url" placeholder="https://linkedin.com/in/your-profile" required>
+       <div class="err" id="e-linkedin"></div>
+      </div>
+     </fieldset>
+
+     <fieldset class="grp" style="border:0;min-inline-size:0">
+      <legend class="gh" style="padding:0"><b>04</b><h3>Documents</h3></legend>
+      <div class="f" data-f="cv">
+       <span class="lbl" id="cvl">Upload Resume / CV <span class="req">*</span></span>
+       <div class="drop" id="drop" role="button" tabindex="0" aria-labelledby="cvl" aria-describedby="cvh">
+        <strong>Upload your CV</strong>
+        <span>Drag &amp; drop your resume here, or <u>Browse Files</u></span>
+        <small id="cvh">PDF, DOC or DOCX &middot; Max 10MB</small>
+       </div>
+       <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" class="sr" tabindex="-1" aria-hidden="true">
+       <div class="file" id="file">
+        <div class="ic" id="fExt">PDF</div>
+        <div class="meta"><div class="nm" id="fName"></div><div class="sz" id="fSize"></div><div class="bar"><i id="fBar"></i></div></div>
+        <button type="button" class="rm" id="rm" aria-label="Remove uploaded CV">Remove</button>
+       </div>
+       <div class="err" id="e-cv"></div>
+      </div>
+      <div class="f" data-f="consent" style="margin-top:22px">
+       <label class="consent"><input type="checkbox" id="consent"><span>I confirm the information above is accurate and agree to Advertising &amp; More Sdn. Bhd. processing it for recruitment purposes. <span class="req">*</span></span></label>
+       <div class="err" id="e-consent"></div>
+      </div>
+     </fieldset>
+
+     <div class="sub"><button class="btn btn-p" id="send" type="submit"><span class="spin" aria-hidden="true"></span><span id="sendT">Send my application &rarr;</span></button></div>
+    </form>
+
+    <div class="state" id="ok" hidden tabindex="-1">
+     <div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+     <h2>Application received.</h2>
+     <p>Thank you for your interest in joining Advertising &amp; More. We've received your application and our team will review your details.</p>
+     <div class="ref"><small>Application Reference</small><b id="refNo"></b></div><br>
+     <button class="btn btn-p" id="back" type="button">Back to job vacancy</button>
+     <a class="btn btn-o" href="https://advertisingandmore.com/">Explore Advertising &amp; More</a>
+    </div>
+    <div class="state" id="fail" hidden tabindex="-1">
+     <div class="tick x"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+     <h2>We couldn't submit your application.</h2>
+     <p>Please check your information and try again.</p>
+     <button class="btn btn-p" id="retry" type="button">Try again</button>
+    </div>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div>
+    <div class="fb"><img src="https://advertisingandmore.com/wp-content/uploads/2026/07/coffee-cup.png" alt="" onerror="this.remove()">Advertising &amp; More Sdn. Bhd.</div>
+    <p style="font-size:.93rem;max-width:300px">Everything you need, under one roof. Headquartered in Kuala Lumpur, with friends all over the world.</p>
+   </div>
+   <div><h4>Explore</h4><ul>
+    <li><a href="https://advertisingandmore.com/home/">Home</a></li>
+    <li><a href="https://advertisingandmore.com/#services">Services</a></li>
+    <li><a href="https://advertisingandmore.com/#about">About</a></li>
+    <li><a href="https://advertisingandmore.com/#reviews">Reviews</a></li></ul></div>
+   <div><h4>Company</h4><ul>
+    <li><a href="https://advertisingandmore.com/#whyus">Why Us</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="https://advertisingandmore.com/#contactform">Contact</a></li></ul></div>
+   <div><h4>Say hello</h4>
+    <p style="margin-bottom:14px"><a href="mailto:hello@advertisingandmore.com" style="color:#fff">hello@advertisingandmore.com</a></p>
+    <a class="btn btn-p" href="https://advertisingandmore.com/#contactform"><img src="https://advertisingandmore.com/wp-content/uploads/2026/07/coffee-cup.png" alt="" onerror="this.remove()">Click For Coffee</a></div>
+  </div>
+  <div class="fbot"><span>Designed &amp; developed with &hearts; by Advertising &amp; More Sdn. Bhd.</span><span>&copy; 2026 All rights reserved.</span></div>
+ </div>
+</footer>
+
+<script>
+/* ===== 1. VACANCY CONTENT: edit this one object with the real job details ===== */
+const JOB={
+  demo:true, // set false once real content is in
+  title:"Account Manager",
+  titleAccent:"Manager",
+  intro:"Help our clients turn big ideas into campaigns that deliver. Join a friendly, ambitious team that loves what it does.",
+  info:[["Position","Account Manager"],["Department","Client Servicing"],["Employment type","Full-time"],["Location","Kuala Lumpur"],["Starting date","As soon as possible"]],
+  about:"You will be a day-to-day partner to our clients, understanding their brand and goals, and working with our creative, media and delivery teams to bring campaigns to life on time and on target.",
+  resp:["Manage client relationships and communication","Translate briefs into clear plans and timelines","Coordinate internal creative, media and delivery teams","Track campaign results and report back to clients"],
+  req:["Relevant experience in advertising, marketing or client servicing","Clear written and spoken communication","Organised, proactive and comfortable with deadlines","A collaborative, positive attitude"]
+};
+/* ===== 2. SUBMISSION SERVICE: connect your backend here ===== */
+const CONFIG={
+  endpoint:"", // POST multipart/form-data; reply JSON {"reference":"AM-2026-00421"}
+  maxBytes:10*1024*1024
+};
+async function submitApplication(fd){
+  if(!CONFIG.endpoint){ // DEMO MODE: nothing is sent anywhere
+    console.warn("[Job page] CONFIG.endpoint is empty: demo mode, application NOT transmitted.");
+    await new Promise(r=>setTimeout(r,1400));
+    return {reference:"AM-"+new Date().getFullYear()+"-"+String(Math.floor(Math.random()*99999)).padStart(5,"0")};
+  }
+  const res=await fetch(CONFIG.endpoint,{method:"POST",body:fd});
+  if(!res.ok)throw new Error("HTTP "+res.status);
+  const j=await res.json().catch(()=>({}));
+  return {reference:j.reference||"AM-"+new Date().getFullYear()+"-"+Date.now().toString().slice(-5)};
+}
+
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+
+/* render vacancy */
+$("#jTitle").innerHTML=esc(JOB.title).replace(esc(JOB.titleAccent),"<em>"+esc(JOB.titleAccent)+"</em>");
+$("#jIntro").textContent=JOB.intro;$("#jAbout").textContent=JOB.about;
+$("#jInfo").innerHTML=JOB.info.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+$("#jResp").innerHTML=JOB.resp.map(x=>`<li>${esc(x)}</li>`).join("");
+$("#jReq").innerHTML=JOB.req.map(x=>`<li>${esc(x)}</li>`).join("");
+if(JOB.demo)$("#jDemo").textContent="Demonstration content: replace with the confirmed vacancy details before publishing.";
+document.title=JOB.title+" | Job Vacancy | Advertising & More";
+
+/* header */
+const burger=$("#burger"),nav=$("#nav");
+function menu(o){nav.classList.toggle("open",o);burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Close menu":"Open menu");document.body.style.overflow=o?"hidden":""}
+burger.onclick=()=>menu(!nav.classList.contains("open"));
+addEventListener("keydown",e=>{if(e.key==="Escape")menu(false)});
+nav.addEventListener("click",e=>{if(e.target.closest("a"))menu(false)});
+matchMedia("(min-width:961px)").addEventListener("change",()=>menu(false));
+
+/* form */
+const form=$("#form"),today=new Date();
+const dobMax=new Date(today.getFullYear()-16,today.getMonth(),today.getDate());
+$("#dob").min="1940-01-01";$("#dob").max=iso(dobMax);
+$("#start").min=iso(today);$("#start").max=iso(new Date(today.getFullYear()+1,today.getMonth(),today.getDate()));
+let file=null,touched={};
+const isForeign=()=>form.foreign.value==="yes";
+const rules={
+ name:v=>v.trim().length<2?"Please enter your full name.":"",
+ passport:v=>isForeign()&&!/^[A-Za-z0-9]{5,15}$/.test(v.trim())?"Please enter your passport number (5-15 letters or numbers).":"",
+ dob:v=>!v?"Please select your date of birth.":(v>iso(dobMax)||v<"1940-01-01"?"Please select a valid date of birth (applicants must be 16 or older).":""),
+ phone:v=>{const d=v.replace(/\D/g,"");return !v.trim()?"Please enter your mobile phone number.":(!/^\+?[\d\s\-()]+$/.test(v.trim())||d.length<8||d.length>15?"Please enter a valid mobile phone number.":"")},
+ employer:v=>!v.trim()?"Please enter your current employer.":"",
+ start:v=>!v?"Please select your earliest starting date.":(v<iso(today)?"Starting date cannot be in the past.":""),
+ linkedin:v=>{try{const u=new URL(v.trim());if(!/^https?:$/.test(u.protocol)||!/(^|\.)linkedin\.com$/i.test(u.hostname)||!/^\/(in|pub)\/[^/]+/i.test(u.pathname))throw 0;return""}catch(e){return"Please enter a valid LinkedIn profile URL (e.g. https://linkedin.com/in/your-profile)."}},
+ cv:()=>file?"":"Please upload your CV.",
+ consent:()=>$("#consent").checked?"":"Please confirm to continue."
+};
+const keys=Object.keys(rules);
+function check(k){
+ const el=$("#"+k),msg=rules[k](el&&el.type!=="checkbox"&&k!=="cv"?el.value:""),f=$(`[data-f="${k}"]`);
+ if(k==="passport"&&!isForeign()){f.classList.remove("bad","good");return true}
+ $("#e-"+k).textContent=msg;f.classList.toggle("bad",!!msg);
+ f.classList.toggle("good",!msg&&!!touched[k]&&k!=="cv"&&k!=="consent");
+ if(k!=="cv"&&el){el.setAttribute("aria-invalid",!!msg);msg?el.setAttribute("aria-describedby","e-"+k):el.removeAttribute("aria-describedby")}
+ return !msg;
+}
+keys.forEach(k=>{const el=$("#"+k);if(k==="cv")return;
+ el.addEventListener("blur",()=>{touched[k]=true;check(k)});
+ el.addEventListener("input",()=>{if(touched[k])check(k)});
+ el.addEventListener("change",()=>{touched[k]=true;check(k)});});
+form.querySelectorAll("[name=foreign]").forEach(r=>r.addEventListener("change",()=>{
+ const on=isForeign();$("#ppWrap").classList.toggle("show",on);$("#passport").disabled=!on;
+ if(!on){$("#passport").value="";touched.passport=false;$("#e-passport").textContent=""}
+}));
+
+/* upload */
+const drop=$("#drop"),inp=$("#cv");
+drop.onclick=()=>inp.click();
+drop.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();inp.click()}};
+["dragenter","dragover"].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add("over")}));
+["dragleave","drop"].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove("over")}));
+drop.addEventListener("drop",e=>setFile(e.dataTransfer.files[0]));
+inp.onchange=()=>setFile(inp.files[0]);
+$("#rm").onclick=()=>clearFile(true);
+const fmt=b=>b<1048576?Math.max(1,Math.round(b/1024))+" KB":(b/1048576).toFixed(1)+" MB";
+function setFile(f){
+ if(!f)return;
+ const ext=(f.name.split(".").pop()||"").toLowerCase(),box=$('[data-f="cv"]');let msg="";
+ if(!["pdf","doc","docx"].includes(ext))msg="Please upload a PDF, DOC or DOCX file.";
+ else if(f.size>CONFIG.maxBytes)msg="File is too large. Maximum size is 10MB.";
+ else if(!f.size)msg="This file appears to be empty.";
+ if(msg){clearFile(false);$("#e-cv").textContent=msg;box.classList.add("bad");return}
+ file=f;touched.cv=true;
+ $("#fName").textContent="✓ "+f.name;$("#fSize").textContent=fmt(f.size);$("#fExt").textContent=ext.toUpperCase();
+ drop.hidden=true;$("#file").classList.add("show");
+ const bar=$("#fBar");bar.style.width="0";const r=new FileReader();
+ r.onprogress=e=>{if(e.lengthComputable)bar.style.width=e.loaded/e.total*100+"%"};r.onload=()=>bar.style.width="100%";r.readAsArrayBuffer(f);
+ check("cv");
+}
+function clearFile(focus){file=null;inp.value="";drop.hidden=false;$("#file").classList.remove("show");$("#fBar").style.width="0";if(focus){touched.cv=true;check("cv");drop.focus()}}
+
+/* submit */
+form.addEventListener("submit",async e=>{
+ e.preventDefault();const btn=$("#send");if(btn.disabled)return;
+ keys.forEach(k=>touched[k]=true);
+ const bad=keys.filter(k=>!check(k)),s=$("#summary");
+ if(bad.length){
+  s.textContent=`Please fix ${bad.length} highlighted field${bad.length>1?"s":""} before sending.`;s.classList.add("show");
+  const f=$(`[data-f="${bad[0]}"]`);f.scrollIntoView({behavior:"smooth",block:"center"});
+  (f.querySelector("input:not([type=file])")||drop).focus({preventScroll:true});return;
+ }
+ s.classList.remove("show");
+ const fd=new FormData(form);fd.set("cv",file);fd.set("position",JOB.title);
+ btn.disabled=true;btn.classList.add("loading");$("#sendT").textContent="Submitting application...";
+ try{const r=await submitApplication(fd);$("#refNo").textContent=r.reference;form.hidden=true;show("ok")}
+ catch(err){console.error(err);form.hidden=true;show("fail")}
+ finally{btn.disabled=false;btn.classList.remove("loading");$("#sendT").innerHTML="Send my application &rarr;"}
+});
+function show(id){["ok","fail"].forEach(x=>$("#"+x).hidden=x!==id);$("#"+id).focus({preventScroll:true});$("#card").scrollIntoView({behavior:"smooth",block:"start"})}
+$("#retry").onclick=()=>{$("#fail").hidden=true;form.hidden=false};
+$("#back").onclick=()=>{
+ form.reset();file=null;touched={};clearFile(false);$("#ppWrap").classList.remove("show");$("#passport").disabled=true;
+ document.querySelectorAll(".f").forEach(f=>f.classList.remove("bad","good"));
+ $("#ok").hidden=true;form.hidden=false;window.scrollTo({top:0,behavior:"smooth"});
+};
+</script>
+</body>
+</html>
